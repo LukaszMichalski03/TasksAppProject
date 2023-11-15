@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="TasksProject.Components.UsersListing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TasksProject.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000">
+    
+    <ListView ItemsSource="{Binding UsersListingItemViewModels}"
+      SelectedItem="{Binding SelectedUserListingItemViewModel, Mode=TwoWay}"
+      SelectionMode="Single" >
+        
+        <ListView.View>
+            <GridView>
+                <GridViewColumn  >
+                    <GridViewColumn.CellTemplate >
+                        <DataTemplate >
+                            <TextBlock Text="{Binding Username}" HorizontalAlignment="Stretch" />
+
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+
+        
+        <ListView.Resources>
+            <Style TargetType="{x:Type GridViewColumnHeader}">
+                
+                
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                            <Grid IsEnabled="False"  />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type ListViewItem}">
+
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Height" Value="auto"/>
+                
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="0"/>
+
+                <Style.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                        <Setter Property="Background" Value="#D0E7D2"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="true">
+
+                        <Setter Property="Background" Value="#B0D9B1"/>
+                        
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            
+            <Style TargetType="{x:Type ListView}">
+                <Setter Property="Background" Value="#618264"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+        </ListView.Resources>
+    </ListView>
+</UserControl>

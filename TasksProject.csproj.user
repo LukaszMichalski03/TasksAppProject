@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Components\CurrentUserDetailsForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\TaskDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\TasksListing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\UserAddTaskForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\UserDetailsForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\UsersListing.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\UserTasksForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomControls\BindablePassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminHomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ProfileView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegisterView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Components\CurrentUserDetailsForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\TaskDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\TasksListing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\UserAddTaskForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\UserDetailsForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\UsersListing.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\UserTasksForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\BindablePassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\ButtonsThemes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminHomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ProfileView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Commands",
+    "\\Components",
+    "\\EF",
+    "\\Models",
+    "\\Stores",
+    "\\Themes",
+    "\\ViewModels",
+    "\\Views"
+  ],
+  "SelectedNode": "\\Stores\\CurrentUserStore.cs",
+  "PreviewInSolutionExplorer": false
+}

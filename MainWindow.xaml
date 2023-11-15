@@ -1,0 +1,28 @@
+﻿<Window x:Class="TasksProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TasksProject" xmlns:viewModel="clr-namespace:TasksProject.ViewModels" xmlns:view="clr-namespace:TasksProject.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1200">
+    <ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+                <view:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:RegisterViewModel}">
+                <view:RegisterView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AdminHomeViewModel}">
+                <view:AdminHomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ProfileViewModel}">
+                <view:ProfileView/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+</Window>

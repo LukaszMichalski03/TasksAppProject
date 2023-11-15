@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="TasksProject.Views.ProfileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TasksProject.Views" xmlns:customControls="clr-namespace:TasksProject.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1200" Background="#588a57">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                
+                <TextBlock Text="Modify Account"  HorizontalAlignment="Center" FontSize="60" FontWeight="ExtraBold"/>
+                <TextBlock Text="{Binding CurrentName}" HorizontalAlignment="Center" FontSize="50" FontWeight="Bold"/>
+                <TextBlock Text="Enter new Username" HorizontalAlignment="Center"  FontSize="30" FontWeight="Bold"/>
+                <TextBox Text="{Binding Username}" FontSize="16" Padding="10 8" Width="300" Margin="0 10" BorderThickness="2" BorderBrush="Black" />
+                <TextBlock Text="Enter new Password" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold"/>
+                <customControls:BindablePassword Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"></customControls:BindablePassword>
+                <Button Content="Save Changes" Width="250" Height="40" FontSize="20" Command="{Binding SaveChanges}" Margin="30" Style="{StaticResource MainButtonTheme}"/>
+                <Button Content="Return to menu" Width="250"  Height="40" FontSize="20" Command="{Binding ReturnToMenu}" Style="{StaticResource MainButtonTheme}" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+
+</UserControl>

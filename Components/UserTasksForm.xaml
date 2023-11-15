@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="TasksProject.Components.UserTasksForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TasksProject.Components" xmlns:models="clr-namespace:TasksProject.Models"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <models:BooleanToStringConverter x:Key="BooleanToStringConverter" />
+    </UserControl.Resources>
+    <ListView ItemsSource="{Binding UserTasksListingItemViewModels}">
+        <ListView.View>
+            <GridView>
+                
+                <GridViewColumn Header="Title" Width="200">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}" Margin="20 0 0 0" FontSize="20" FontWeight="Bold" />                           
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                <GridViewColumn Header="IsDone" Width="200">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding IsDone, Converter={StaticResource BooleanToStringConverter}}" Margin="20 0 0 0" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+                
+                <GridViewColumn Header="" Width="100" >
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" Command="{Binding FastDeleteTaskCommand}" Margin="0" Height="23"  Style="{StaticResource DeleteButtonTheme}" Width="80" FontSize="15" />
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
+        <ListView.Resources>
+            
+            <Style TargetType="{x:Type GridViewColumnHeader}">
+                <Setter Property="Background" Value="#d9cab4"/>
+                <Setter Property="Height" Value="40"/>
+                <Style.Triggers>
+                    
+                   
+                </Style.Triggers>
+
+            </Style>
+            
+            <Style TargetType="{x:Type ListViewItem}">
+
+                <Setter Property="Background" Value="#FAF1E4"/>
+                <Setter Property="Foreground" Value="Black"/>
+                
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Style.Triggers>
+                    <Trigger Property="IsSelected" Value="true">
+                        <Setter Property="Background" Value="#b5ab9e"/>
+                    </Trigger>
+                    <Trigger Property="IsMouseOver" Value="true">
+
+                        <Setter Property="Background" Value="#d9c9b6"/>
+
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style TargetType="{x:Type ListView}">
+                <Setter Property="Background" Value="transparent"/>
+
+                <Setter Property="BorderThickness" Value="0"/>
+            </Style>
+        </ListView.Resources>
+    </ListView>
+</UserControl>
