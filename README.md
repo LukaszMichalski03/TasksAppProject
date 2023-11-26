@@ -6,5 +6,5 @@
 * Each account has the ability to change its login and password.
 
 ### Project Setup
-To run this project you need to set your own **connection string** for the database, which can be found in [DataContext.cs](EF/DataContext.cs) file
+To run this project you need to set your own **connection string** for the database, which can be found in [DataContext.cs](EF/DataContext.cs) file, line 16
 ### Project Structure
