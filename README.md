@@ -12,11 +12,11 @@ To run this project you need to set your own **connection string** for the datab
 Views bind with ViewModels with the same name, only with the "*ViewModel*" suffix instead of "*View*". 
 In the "*MainWindow.xaml*", the corresponding view is displayed depending on the value of *CurrentViewModel* in the [MainViewModel.cs](ViewModels/MainViewModel.cs).
 #### Stores
-* [NavigationStore.cs](Store/NavigationStore.cs) - stores the view that is currently being displayed
-* [CurrentUserStore.cs](Store/CurrentUserStore.cs) - stores the user who is currently logged in
-* [SelectedUserStore.cs](Store/SelectedUserStore.cs) - stores the user from the list who is currently selected
-* [SelectedTaskStore.cs](Store/SelectedTaskStore.cs) - stores the task from the list that is currently selected
-* [DetailsFormNavigationStore.cs](Store/DetailsFormNavigationStore.cs) - stores the form that is currently being displayed
+* [NavigationStore.cs](Stores/NavigationStore.cs) - stores the view that is currently being displayed
+* [CurrentUserStore.cs](Stores/CurrentUserStore.cs) - stores the user who is currently logged in
+* [SelectedUserStore.cs](Stores/SelectedUserStore.cs) - stores the user from the list who is currently selected
+* [SelectedTaskStore.cs](Stores/SelectedTaskStore.cs) - stores the task from the list that is currently selected
+* [DetailsFormNavigationStore.cs](Stores/DetailsFormNavigationStore.cs) - stores the form that is currently being displayed
 #### Entity Framework Core
 In the ***DTOs*** folder, there are classes **TaskDTO.cs** and **UserDTO.cs** that define database tables.\
 In the ***EF*** folder, there is a **DataContext.cs** inheriting from **DbContext**, where the connection string is located, and the relationship between database tables is described. Additionally, there is a **DbContextFactory.cs** that creates new DbContexts.
