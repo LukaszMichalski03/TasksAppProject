@@ -6,7 +6,8 @@
 * Each account has the ability to change its login and password.
 
 ### Project Setup
-To run this project you need to set your own **connection string** for the database, which can be found in [DataContext.cs](EF/DataContext.cs) file
+Application uses SQlServer database so you must have it installed.
+To run this project you need to set your own **connection string** for the database, which can be found in [DataContext.cs](EF/DataContext.cs) file.
 ### Project Structure
 #### Views and ViewModels
 Views bind with ViewModels with the same name, only with the "*ViewModel*" suffix instead of "*View*". 
