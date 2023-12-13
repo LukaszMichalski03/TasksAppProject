@@ -6,7 +6,7 @@
 * Each account has the ability to change its login and password.
 
 ### Project Setup
-Application uses SQlServer database so you must have it installed.
+Application uses SQlServer database so you must have it installed.\
 To run this project you need to set your own **connection string** for the database, which can be found in [DataContext.cs](EF/DataContext.cs) file.
 ### Project Structure
 #### Views and ViewModels
