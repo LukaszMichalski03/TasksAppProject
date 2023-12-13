@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Łukasz\Desktop\projekty\c#\TasksProjectTest\obj\Debug\net6.0-windows\
+C:\Users\Łukasz\Source\Repos\Tttest\obj\Debug\net6.0-windows\
 TasksProject
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Łukasz\Desktop\projekty\c#\TasksProjectTest\App.xaml
+C:\Users\Łukasz\Source\Repos\Tttest\App.xaml
 15-1629654475
 
 73-84429658
-2221233107497
+242517008047
 Components\CurrentUserDetailsForm.xaml;Components\TaskDetails.xaml;Components\TasksListing.xaml;Components\UserAddTaskForm.xaml;Components\UserDetailsForm.xaml;Components\UsersListing.xaml;Components\UserTasksForm.xaml;CustomControls\BindablePassword.xaml;MainWindow.xaml;Themes\ButtonsThemes.xaml;Views\AdminHomeView.xaml;Views\HomeView.xaml;Views\LoginView.xaml;Views\ProfileView.xaml;Views\RegisterView.xaml;
 
 False
